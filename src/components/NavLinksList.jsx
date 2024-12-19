@@ -25,27 +25,44 @@ const NavLinksList = ({  dispatch }) => {
                             >
                                 <Link to="/services" className="cursor-pointer font-semibold">{link.title}</Link>
                                 {showMenu && (
-                                    <motion.ul
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="absolute top-5   -left-5 mt-2 w-52 p-3 bg-white text-black shadow-lg rounded-lg p-0"
-                                    >
-                                        {serviceData.map((service) => (
-                                            <li
-                                                key={service.id}
-                                                className="py-1 px-2 hover:bg-gray-200 rounded"
-                                            >
-                                                <Link
-                                                    className="text-sm"
-                                                    to="/services"
-                                                    onClick={() => dispatch(selectSerivce(service.id))}
-                                                >
-                                                    {service.title}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </motion.ul>
+                                   <motion.ul
+                                   initial="hidden" // Initial animation state
+                                   animate="visible" // Final animation state
+
+                                   variants={{
+                                       visible: {
+                                           opacity: 1,
+                                           transition: {
+                                               staggerChildren: 0.2, // Delay between child animations
+                                           },
+                                       },
+                                       hidden: { opacity: 0 },
+                                   }}
+                                   className="absolute top-5 -left-5 mt-2 w-52 p-3 bg-white text-black shadow-lg rounded-lg p-0"
+                               >
+                                   {serviceData.map((service) => (
+                                       <motion.li
+                                           key={service.id}
+                                           variants={{
+                                               hidden: { opacity: 0, y: -10 }, // Start off slightly above
+                                               visible: { opacity: 1, y: 0 }, // Animate to position
+                                           }}
+                                           transition={{ duration: 0.3 }}
+                                   whileHover={{ scale: 1.1 }}
+
+                                           className="py-1 px-2 hover:bg-amber-50 rounded"
+                                       >
+                                           <Link
+                                               className="text-sm"
+                                               to="/services"
+                                               onClick={() => dispatch(selectSerivce(service.id))}
+                                           >
+                                               {service.title}
+                                           </Link>
+                                       </motion.li>
+                                   ))}
+                               </motion.ul>
+                               
                                 )}
                             </div>
                         ) : (

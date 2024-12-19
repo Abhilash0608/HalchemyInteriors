@@ -1,4 +1,4 @@
-import { associateBrands } from "../utils/servicesData";
+import InfiniteCarousel from "./InfiniteCarousel";
 import SectionHeader from "./SectionHeader";
 
 const AssociateBrands = () => {
@@ -7,16 +7,8 @@ const AssociateBrands = () => {
             <div>
                 <SectionHeader mainHeading={"Our Associate"} subHeading={"Brands"} />
             </div>
-            <div className="w-full grid grid-cols-2 place-items-center lg:grid-cols-4  md:grid-cols-4 md:gap-6">
-                {associateBrands.map((item, index) => (
-                    <img 
-                        key={index} 
-                        src={item.src} 
-                        alt={item.alt || "Logo"} 
-                        className="h-28 w-28" 
-                    />
-                ))}
-            </div>
+            <InfiniteCarousel/>
+            
         </div>
     );
 };

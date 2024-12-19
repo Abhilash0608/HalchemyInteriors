@@ -31,6 +31,16 @@ const ContactUs = () => {
           </div>
           <div>
             <input
+              type="number"
+              placeholder="Your Phone Number"
+              max="10"
+              className="border border-yellow-700 p-2 w-full rounded-lg focus:outline-none focus:ring focus:ring-orange-300"
+              onFocus={() => setFocusedField("")}
+              onBlur={() => setFocusedField("")}
+            />
+          </div>
+          <div>
+            <input
               type="email"
               placeholder="Your Email"
               className="border border-yellow-700 p-2 w-full rounded-lg focus:outline-none focus:ring focus:ring-orange-300"
