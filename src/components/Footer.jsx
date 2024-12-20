@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,12 +8,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-[90vw] grid grid-cols-1 md:grid-cols-3 md:place-items-center gap-8">
         
         {/* Get In Touch Section */}
-        <div className="flex flex-col items-center md:items-start">
-          <h4 className="text-xl md:text-2xl font-semibold mb-4 text-white">Get In Touch</h4>
-          <p className="mb-4">
-            You can use a few enticing words and flaunt your capabilities that will attract future clients and encourage them to hire you right away.
-          </p>
-        </div>
+      
 
         {/* Menu Section */}
         <div className="flex flex-col items-center md:items-start md:mt-16">
@@ -55,8 +50,29 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        <div className="w-full py-4  ">
+        <div className="container mx-auto flex flex-col  justify-between items-center text-white">
+          <span className="my-2">© 2024 Halchemy Interiors. All Rights Reserved.</span>
+          
+          <div className="flex gap-4">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="text-2xl hover:text-gray-900" />
+            </a>
+            <a href="https://www.instagram.com/halchemy_interiors/profilecard/?igsh=MW9wdTR0bHR2ZmlwdA==" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-2xl hover:text-gray-900" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-2xl hover:text-gray-900" />
+            </a>
+          </div>
+        </div>
+      </div>
 
       </div>
+
+      {/* Footer Bottom Section */}
+      
+
     </footer>
   );
 };

@@ -530,7 +530,17 @@ body {
 
 @media (max-width: 640px) {
   .whatsapp-icon{
-    /* display: none; */
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    bottom: 10%;
+    left: 80%;
+    background-color: green;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: blink 3s infinite;
+    animation-delay: 5s;
+    z-index: 10;
   }
 }
 
@@ -590,7 +600,7 @@ body {
 }
 
 .loading-text {
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: bold;
   z-index: 20;
 }
@@ -602,7 +612,7 @@ body {
 
 @media (max-width: 480px) {
   .loading-text {
-    font-size: 3.5rem;  /* Even smaller font size for very small devices */
+    font-size: 3rem;  /* Even smaller font size for very small devices */
   }
 }
 
