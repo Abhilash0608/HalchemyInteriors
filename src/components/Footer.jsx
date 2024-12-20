@@ -5,13 +5,13 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaTwit
 const Footer = () => {
   return (
     <footer className="bg-[#8A7C56] text-white py-16">
-      <div className="container mx-auto max-w-[90vw] grid grid-cols-1 md:grid-cols-3 md:place-items-center gap-8">
+      <div className="container mx-auto max-w-[90vw] grid grid-cols-1 place-items-center md:grid-cols-3 md:place-items-center gap-8">
         
         {/* Get In Touch Section */}
       
 
         {/* Menu Section */}
-        <div className="flex flex-col items-center md:items-start md:mt-16">
+        <div className="flex flex-col items-center md:items-center ">
           <h4 className="text-xl md:text-2xl font-semibold mb-4 text-white-900">Menu</h4>
           <ul className="space-y-4">
             <li>
@@ -50,9 +50,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full py-4  ">
+        <div className="w-full py-4 flex justify-center items-center ">
         <div className="container mx-auto flex flex-col  justify-between items-center text-white">
-          <span className="my-2">© 2024 Halchemy Interiors. All Rights Reserved.</span>
+          <span className="my-2  text-center">© 2024 Halchemy Interiors. All Rights Reserved.</span>
           
           <div className="flex gap-4">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">

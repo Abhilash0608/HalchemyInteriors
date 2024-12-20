@@ -67,7 +67,7 @@ const ScratchCard = ({ image, overlayImage, brushSize, closeModal }) => {
 
     const percent = (scratchedPixels / totalPixels) * 100;
 
-    if (percent > 70) {
+    if (percent > 40) {
       context.clearRect(0, 0, dimensions.width, dimensions.height); // Reveal full image
       setIsCompleted(true); // Mark the scratch as completed
     }
