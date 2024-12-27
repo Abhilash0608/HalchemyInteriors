@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+
 const MostVisitedProducts = () => {
   const mostVisitedProducts = [
     {
@@ -29,23 +30,23 @@ const MostVisitedProducts = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-10 px-6 lg:px-20">
-      {/* Heading and Button */}
-      <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
-       
-        <SectionHeader mainHeading={"Our Most Visited"} subHeading={" Products"}/>
+    <div className="w-full bg-gray-50 py-10 px-6 lg:px-20">
+      {/* Heading */}
+      <div className="relative w-full flex justify-center items-center mb-8 mx-auto">
+        <SectionHeader mainHeading={"Our Most Visited"} subHeading={" Products"} />
+        
+        {/* See More Button (Desktop View - Top Right) */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           to="/products"
-          className="mt-4 lg:mt-0 bg-[#8A7C56] text-white py-2 px-6 w-48 flex items-center justify-center rounded-lg shadow-md transition-all"
+          className="absolute top-0 right-0 mt-8 mr-4 hidden lg:flex items-center justify-center bg-[#8A7C56] text-white py-2 px-6 w-48 rounded-lg shadow-md transition-all"
           style={{ overflow: "hidden" }}
         >
-            <Link to="/products" className="mr-2 flex items-center justify-center gap-4">
-          See More
-          <FaArrowRight />
-
-            </Link>
+          <Link to="/products" className="mr-2 flex items-center justify-center gap-4">
+            See More
+            <FaArrowRight />
+          </Link>
         </motion.button>
       </div>
 
@@ -69,6 +70,22 @@ const MostVisitedProducts = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* See More Button (Mobile View - Bottom) */}
+      <div className="mt-8 flex justify-center lg:hidden">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          to="/products"
+          className="bg-[#8A7C56] text-white py-2 px-6 w-48 flex items-center justify-center rounded-lg shadow-md transition-all"
+          style={{ overflow: "hidden" }}
+        >
+          <Link to="/products" className="mr-2 flex items-center justify-center gap-4">
+            See More
+            <FaArrowRight />
+          </Link>
+        </motion.button>
       </div>
     </div>
   );
