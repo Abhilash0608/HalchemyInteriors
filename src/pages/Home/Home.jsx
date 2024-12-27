@@ -7,6 +7,7 @@ import LoadingScreen from "../../components/LoadingScreen"
 import OurServices from "../../components/OurServices"
 import Slider from "../../components/Slider"
 import TestimonialSlider from "../../components/Testimonails"
+import MostVisitedProducts from "../../components/MostVisited"
 
 const Home = () => {
       const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,7 @@ const Home = () => {
         <div className='relative'>
             {isLoading && <LoadingScreen isVisible={isLoading} />}
             <Hero />
+            <MostVisitedProducts/>
             <Slider />
             <OurServices />
             <Aboutus />

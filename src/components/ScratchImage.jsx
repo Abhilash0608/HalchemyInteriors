@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { MdOutlineWavingHand } from "react-icons/md";
-import { useNavigate } from "react-router-dom"; // React Router for navigation
+import { useNavigate } from "react-router-dom";
 import { TiArrowRight } from "react-icons/ti";
 
 const ScratchCard = ({ image, overlayImage, brushSize, closeModal }) => {
@@ -8,18 +8,20 @@ const ScratchCard = ({ image, overlayImage, brushSize, closeModal }) => {
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [hasScratched, setHasScratched] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [isImageVisible, setIsImageVisible] = useState(false); 
+  const [isImageVisible, setIsImageVisible] = useState(false);
   const [dimensions, setDimensions] = useState({
     width: 600,
     height: 400,
   });
 
   const navigate = useNavigate();
+
   useEffect(() => {
     // Show the image after 1 second
     const timer = setTimeout(() => setIsImageVisible(true), 1000);
     return () => clearTimeout(timer);
   }, []);
+
   useEffect(() => {
     // Adjust dimensions based on screen size
     const updateDimensions = () => {
@@ -116,8 +118,19 @@ const ScratchCard = ({ image, overlayImage, brushSize, closeModal }) => {
       style={{
         width: `${dimensions.width}px`,
         height: `${dimensions.height}px`,
+        position: "relative",
+        overflow: "hidden", // Prevents shifting
       }}
     >
+      {/* Bottom Image */}
+      <img
+        src={image}
+        alt="bottom"
+        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 ${
+          isImageVisible ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
       {/* Canvas for overlay image */}
       <canvas
         ref={canvasRef}
@@ -131,15 +144,6 @@ const ScratchCard = ({ image, overlayImage, brushSize, closeModal }) => {
         onTouchMove={handleMouseMove}
         onTouchEnd={handleMouseUp}
         className="absolute inset-0 cursor-pointer z-10"
-      />
-
-      {/* Bottom Image */}
-      <img
-        src={image}
-        alt="bottom"
-        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 ${
-          isImageVisible ? "block opacity-100" : "hidden opacity-0"
-        }`}
       />
 
       {/* Text and Icon (conditionally rendered) */}
@@ -159,7 +163,7 @@ const ScratchCard = ({ image, overlayImage, brushSize, closeModal }) => {
             onClick={handleExploreClick}
             className="bg-[#8A7C56] text-white flex items-center justify-center font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
           >
-            Explore Now <TiArrowRight className="text-3xl" />
+            Explore Now <TiArrowRight className="text-3xl ml-2" />
           </button>
         </div>
       )}

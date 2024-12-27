@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { portfolioImages } from '../utils/servicesData';
 
-const Portfolio = () => {
+const Portfolio = ({ CurrentImages }) => {
   const [currentPortfolioIndex, setCurrentPortfolioIndex] = useState(0); // Track selected portfolio index
-  const [selectedImage, setSelectedImage] = useState(portfolioImages[0].images[0]);
+  const [selectedImage, setSelectedImage] = useState(CurrentImages[0].images[0]);
   const [startTouch, setStartTouch] = useState(0); // For detecting touch start position
 
-  const currentPortfolio = portfolioImages[currentPortfolioIndex];
+  const currentPortfolio = CurrentImages[currentPortfolioIndex];
 
   const handleTabChange = (index) => {
     setCurrentPortfolioIndex(index);
-    setSelectedImage(portfolioImages[index].images[0]); // Reset to the first image of the selected portfolio
+    setSelectedImage(CurrentImages[index].images[0]); // Reset to the first image of the selected portfolio
   };
 
   const handleTouchStart = (e) => {
@@ -43,10 +42,10 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="w-full flex flex-col max-w-[90vw] lg:max-w-[80vw] mx-auto items-center px-4 py-8">
+    <div className="w-full flex flex-col max-w-[90vw] lg:max-w-[80vw] mx-auto items-center px-4 py-16">
       {/* Tab Buttons */}
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 max-w-full mb-6">
-        {portfolioImages.map((portfolio, index) => (
+        {CurrentImages.map((portfolio, index) => (
           <button
             key={index}
             onClick={() => handleTabChange(index)}
@@ -77,9 +76,13 @@ const Portfolio = () => {
         {currentPortfolio.images.map((image, index) => (
           <div
             key={index}
-            className="w-10 h-10 md:w-20 md:h-20 bg-cover bg-center rounded-md cursor-pointer hover:scale-105 transform transition-all"
+            className={`w-12 h-12 md:w-16 md:h-16 bg-cover bg-center rounded-md cursor-pointer transition-all transform ${
+              image === selectedImage
+                ? 'scale-110 z-10' // Active image gets a larger size
+                : 'scale-90 hover:scale-105'
+            }`}
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${image})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${image})`, // Increased gradient
             }}
             onClick={() => setSelectedImage(image)}
           ></div>

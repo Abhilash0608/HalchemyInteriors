@@ -6,31 +6,42 @@ const Footer = () => {
   return (
     <footer className="bg-[#8A7C56] text-white py-16">
       <div className="container mx-auto max-w-[90vw] grid grid-cols-1 place-items-center md:grid-cols-3 md:place-items-center gap-8">
-        
+
         {/* Get In Touch Section */}
-      
+
 
         {/* Menu Section */}
-        <div className="flex flex-col items-center md:items-center ">
-          <h4 className="text-xl md:text-2xl font-semibold mb-4 text-white-900">Menu</h4>
-          <ul className="space-y-4">
-            <li>
-              <Link to="/" className="hover:text-gray-900">Home</Link>
-            </li>
-            <li>
-              <Link to="/services" className="hover:text-gray-900">Services</Link>
-            </li>
-            <li>
-              <Link to="/testimonials" className="hover:text-gray-900">Testimonials</Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:text-gray-900">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-gray-900">Contact Us</Link>
-            </li>
-          </ul>
+        <div className="flex flex-col md:items-start lg:items-start items-center justify-start">
+        <h4 className="text-xl md:text-2xl font-semibold mb-4 text-white-900">Menu</h4>
+          <div className="flex gap-12">
+          <div className="flex flex-col items-center">
+            <ul className="space-y-4">
+              <li>
+                <Link to="/" className="hover:text-gray-900">Home</Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-gray-900">Services</Link>
+              </li>
+              <li>
+                <Link to="/testimonials" className="hover:text-gray-900">Products</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <ul className="space-y-4">
+              <li>
+                <Link to="/about" className="hover:text-gray-900">About Us</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-gray-900">Contact Us</Link>
+              </li>
+            </ul>
+          </div> 
+          </div>
+          
         </div>
+
 
         {/* Contact Details Section */}
         <div className="flex flex-col items-center md:items-start">
@@ -51,27 +62,27 @@ const Footer = () => {
           </ul>
         </div>
         <div className="w-full py-4 flex justify-center items-center ">
-        <div className="container mx-auto flex flex-col  justify-between items-center text-white">
-          <span className="my-2  text-center">© 2024 Halchemy Interiors. All Rights Reserved.</span>
-          
-          <div className="flex gap-4">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-2xl hover:text-gray-900" />
-            </a>
-            <a href="https://www.instagram.com/halchemy_interiors/profilecard/?igsh=MW9wdTR0bHR2ZmlwdA==" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-2xl hover:text-gray-900" />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-2xl hover:text-gray-900" />
-            </a>
+          <div className="container mx-auto flex flex-col  justify-between items-center text-white">
+            <span className="my-2  text-center">© 2024 Halchemy Interiors. All Rights Reserved.</span>
+
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="text-2xl hover:text-gray-900" />
+              </a>
+              <a href="https://www.instagram.com/halchemy_interiors/profilecard/?igsh=MW9wdTR0bHR2ZmlwdA==" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-2xl hover:text-gray-900" />
+              </a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="text-2xl hover:text-gray-900" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
       </div>
 
       {/* Footer Bottom Section */}
-      
+
 
     </footer>
   );

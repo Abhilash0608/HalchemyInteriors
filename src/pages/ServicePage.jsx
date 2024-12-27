@@ -5,7 +5,9 @@ import './servicePage.css';
 import Portfolio from '../components/Portfolio';
 import { Link } from 'react-router-dom';
 import LoadingScreen from '../components/LoadingScreen';
-
+import { ResidentialImages } from '../utils/servicesData';
+import { CommercialImages } from '../utils/servicesData';
+import {FurnitureImages} from '../utils/servicesData'
 
 const ServicePage = () => {
     const currentService = useSelector((state) => state.services.currentService);
@@ -51,8 +53,8 @@ const ServicePage = () => {
                             <div className="flex flex-col justify-center h-full  items-center">
                                 <h1 className='text-2xl md:text-4xl lg:text-4xl'>{currentService.title}</h1>
                                 <div className="breadcrumb mt-2">
-                                    <h3 className='text-xl md:text-2xl lg:text-3xl'>
-                                        <Link to="/">Home</Link>
+                                    <h3 className='text-xl md:text-2xl lg:text-3xl bg-none'>
+                                        <Link to="/" className='underline'>Home</Link>
                                     </h3>
                                     <p>-</p>
                                     <h3 className='text-xl md:text-2xl lg:text-3xl'>Service Details</h3>
@@ -68,7 +70,11 @@ const ServicePage = () => {
                                 </p>
                             </div>
                         </div>
-                        {currentService.id === 2 && <Portfolio />}
+                        {currentService.id === 2 && <Portfolio CurrentImages={ResidentialImages} />}
+                        {currentService.id === 3 && <Portfolio CurrentImages={CommercialImages} />}
+                        {currentService.id === 4 && <Portfolio CurrentImages={FurnitureImages} />}
+
+
                     </div>
                 </main>
             </div>

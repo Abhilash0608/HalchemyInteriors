@@ -354,7 +354,7 @@ body {
 .header-line:hover{
   background-color: #8A7C56;
 }
-.underline{
+.underlinee{
   width:20%;
   height: 4px;
    background-color:#8A7C56;
@@ -368,17 +368,12 @@ body {
 
 .italic-heading {
   font-style: italic;
-  font-size: 42px;
+  font-size: 32px;
   color: #8A7C56;
   letter-spacing: 2px;
 }
 
-.underline {
-  width: 20%; 
-  height: 4px;
-  background-color: #8A7C56;
-  border-radius: 10px;
-}
+
 
 .nav-header {
   background: transparent;
@@ -468,7 +463,7 @@ body {
 }
 /* ------------- *about us * ---------- */
 .aboutus-section{
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../src/assets/image3.jpg');
+  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../src/assets/image3.jpg'); */
   border-radius: 10px;
   background-size: cover;
   background-size: cover;

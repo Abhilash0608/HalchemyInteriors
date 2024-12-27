@@ -4,8 +4,8 @@ import SectionHeader from "./SectionHeader"
 const OurServices = () => {
     return (
         <main className="max-w-[90vw] m-auto">
-            <div className="grid grid-cols-2 items-center py-8">
-                <SectionHeader mainHeading="Explore our Best" subHeading="Services" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-8">
+                <SectionHeader mainHeading="Explore Our Best" subHeading="Services" />
 
                <AchievementsSection workAchievements={workAchievements}/>
             </div>

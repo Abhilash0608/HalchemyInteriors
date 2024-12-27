@@ -26,7 +26,7 @@ function App() {
 
   // Show modal after 30 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowModal(true), 3000); // 30 seconds
+    const timer = setTimeout(() => setShowModal(true), 30000); // 30 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -67,7 +67,7 @@ function App() {
         {/* Modal */}
         {showModal && (
           <div
-          className="fixed inset-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center  z-[999]"
+          className="fixed inset-0 w-full h-full bg-black bg-opacity-100 flex justify-center items-center  z-[999]"
         >
           <div
             className="relative bg-white rounded-lg shadow-lg   text-center"
