@@ -4,10 +4,15 @@ import SectionHeader from "./SectionHeader"
 const OurServices = () => {
     return (
         <main className="max-w-[90vw] m-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 items-center py-8">
+                <div className="col-span-1">
                 <SectionHeader mainHeading="Explore Our Best" subHeading="Services" />
 
-               <AchievementsSection workAchievements={workAchievements}/>
+                </div>
+        <div className="col-span-3 flex justify-end ">
+        <AchievementsSection workAchievements={workAchievements}/>
+
+        </div>
             </div>
 
             <div className="card-container ">

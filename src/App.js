@@ -26,7 +26,7 @@ function App() {
 
   // Show modal after 30 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowModal(true), 30000); // 30 seconds
+    const timer = setTimeout(() => setShowModal(true), 20000); // 30 seconds
     return () => clearTimeout(timer);
   }, []);
 

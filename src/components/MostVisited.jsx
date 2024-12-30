@@ -32,8 +32,11 @@ const MostVisitedProducts = () => {
   return (
     <div className="w-full bg-gray-50 py-10 px-6 lg:px-20">
       {/* Heading */}
-      <div className="relative w-full flex justify-center items-center mb-8 mx-auto">
-        <SectionHeader mainHeading={"Our Most Visited"} subHeading={" Products"} />
+      <div className="relative w-full grid md:grid-cols-4 lg:md:grid-cols-4 mb-8 mx-auto">
+        <div className="col-span-1">
+        <SectionHeader  mainHeading={"Our Most Visited"} subHeading={" Products"} />
+
+        </div>
         
         {/* See More Button (Desktop View - Top Right) */}
         <motion.button

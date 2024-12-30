@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+  const phoneNumber = '9515261555';
+  const message =
+  'Hello Halchemy Team, I am interested to know more about your interior design services.';
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  message
+)}`;
   return (
     <footer className="bg-[#8A7C56] text-white py-16">
       <div className="container mx-auto max-w-[90vw] grid grid-cols-1 place-items-center md:grid-cols-3 md:place-items-center gap-8">
@@ -66,14 +72,16 @@ const Footer = () => {
             <span className="my-2  text-center">© 2024 Halchemy Interiors. All Rights Reserved.</span>
 
             <div className="flex gap-4">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61568316147271&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-2xl hover:text-gray-900" />
               </a>
               <a href="https://www.instagram.com/halchemy_interiors/profilecard/?igsh=MW9wdTR0bHR2ZmlwdA==" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-2xl hover:text-gray-900" />
               </a>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-2xl hover:text-gray-900" />
+              <a href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer">
+                <FaWhatsapp className="text-2xl hover:text-gray-900" />
               </a>
             </div>
           </div>
