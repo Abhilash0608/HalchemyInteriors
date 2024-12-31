@@ -26,7 +26,7 @@ const Hero = () => {
             className={`flex flex-col m-auto relative ${isHomePage ? "h-screen" : "h-[70vh]"
                 } w-full bg-cover bg-center bg-no-repeat relative`}
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${hero3})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(${hero3})`,
             }}
         >
             {/* Pass the isScrolled state to Navbar */}
