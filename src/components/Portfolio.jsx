@@ -69,7 +69,7 @@ const Portfolio = ({ CurrentImages }) => {
         onTouchStart={handleTouchStart} // Start touch event
         onTouchEnd={handleTouchEnd}   // End touch event
       >
-        <img src={selectedImage} alt="Selected" className="w-full h-full object-cover" />
+        <img src={selectedImage} alt="Selected" className="w-full h-full object-fit" />
       </div>
 
       <div className="flex flex-wrap justify-center gap-4 mb-6">
@@ -88,7 +88,7 @@ const Portfolio = ({ CurrentImages }) => {
           ></div>
         ))}
       </div>
-      <p className="text-center text-gray-600 max-w-3xl text-base text-base md:text-xl lg:text-xl">
+      <p className="text-center text-gray-600 max-w-3xl font-futura font-normal leading-loose">
         {currentPortfolio.description}
       </p>
     </div>

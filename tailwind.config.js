@@ -5,6 +5,15 @@ module.exports = {
   ],
   theme: {
       extend: {
+        fontFamily: {
+          futura: ['Futura', 'sans-serif'],
+        },
+        fontSize: {
+          base: '14px',
+        },
+        fontWeight: {
+          normal: '400',
+        },
         animation: {
           'rotate': 'rotate 20s linear infinite',
         },
@@ -18,6 +27,7 @@ module.exports = {
           '400': '400px',
         },
       },
+    
   },
   plugins: [],
 }

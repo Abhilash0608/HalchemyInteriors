@@ -30,7 +30,7 @@ const SectionHeader = ({ mainHeading, subHeading }) => {
                     initial={{ x: 100, opacity: 0 }} // Start from the right
                     whileInView={{ x: 0, opacity: 1 }} // Trigger animation when in view
                     viewport={{ once: true, amount: 0.5 }} // Trigger once, when 50% in view
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.8 }} // Smooth transition with delay
+                    transition={{ duration: 0.3, ease: "easeOut", delay: 0.3 }} // Smooth transition with delay
                 >
                     {subHeading}
                 </motion.h1>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Hero from "../../components/Hero";
 import LoadingScreen from "../../components/LoadingScreen";
+import MetaTags from "../../components/MetaTags";
 
 const products = [
   {
@@ -66,6 +67,11 @@ const ProductsPage = () => {
   return (
     <>
       {isLoading && <LoadingScreen isVisible={isLoading} />}
+      <MetaTags
+        title="Halchemy Interiors - Our Products"
+        description="Explore our premium range of products, including tiles, furniture, and interior decor items."
+        canonical="https://www.halchemyinteriors.com/products"
+      />
       <div
         style={{
           transition: "opacity 0.5s ease-in-out",

@@ -20,7 +20,7 @@ const OurServices = () => {
                     <div key={service.id} className="card hover:text-white text-gray-600">
                         <h3 className=" text-xl md:text-2xl lg:text-2xl">{`0${service.id}`}</h3>
                         <h2 className=" text-xl md:text-2xl lg:text-2xl">{service.title}</h2>
-                        <p className="md:text-center lg:text-center  hover:text-white     text-md md:text-md lg:text-md  ">{service.description}</p>
+                        <p className="md:text-center lg:text-center  hover:text-white    text-base font-futura font-normal leading-loose  ">{service.description}</p>
                     </div>
                 ))}
             </div>

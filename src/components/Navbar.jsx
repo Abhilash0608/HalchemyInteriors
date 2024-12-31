@@ -80,8 +80,8 @@ export default function Navbar({ isScrolled }) {
                                                 onClick={() => setShowSubMenu(!showSubMenu)}
                                                 className="flex items-center justify-between cursor-pointer"
                                             >
-                                                <span>{link.title}</span>
-                                                <span>{showSubMenu ? '-' : '+'}</span>
+                                                <span className='text-base'>{link.title}</span>
+                                                <span className='text-base'>{showSubMenu ? '-' : '+'}</span>
                                             </div>
 
                                             {showSubMenu && (

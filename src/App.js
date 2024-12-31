@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 import { FaWhatsapp } from 'react-icons/fa';
 import React, { Suspense, useEffect, useState } from 'react';
 import LoadingScreen from './components/LoadingScreen';
@@ -26,12 +25,12 @@ function App() {
 
   // Show modal after 30 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowModal(true), 20000); // 30 seconds
+    const timer = setTimeout(() => setShowModal(true), 15000); 
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000); // Loading duration: 2 seconds
+    const timer = setTimeout(() => setIsLoading(false), 2000); 
     return () => clearTimeout(timer);
   }, []);
 

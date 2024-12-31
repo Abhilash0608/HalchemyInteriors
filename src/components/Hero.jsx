@@ -23,11 +23,10 @@ const Hero = () => {
 
     return (
         <main
-            className={`flex flex-col m-auto relative ${
-                isHomePage ? "h-screen" : "h-[70vh]"
-            } w-full bg-cover bg-center bg-no-repeat relative`}
+            className={`flex flex-col m-auto relative ${isHomePage ? "h-screen" : "h-[70vh]"
+                } w-full bg-cover bg-center bg-no-repeat relative`}
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(${hero3})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${hero3})`,
             }}
         >
             {/* Pass the isScrolled state to Navbar */}
@@ -40,7 +39,7 @@ const Hero = () => {
                     className="text-white text-2xl md:text-4xl lg:text-4xl leading-tight md:leading-normal lg:leading-normal italic w-[50%]"
                     initial={{ y: 100, opacity: 0 }} // Start from bottom
                     whileInView={{ y: 0, opacity: 1 }} // Animate when in view
-                    transition={{ duration: 1, ease: "easeOut",delay:2 }} // Smooth transition
+                    transition={{ duration: 1, ease: "easeOut", delay: 2 }} // Smooth transition
                     viewport={{ once: true, amount: 0.5 }} // Trigger once when 50% in view
                 >
                     Welcome to<br />
@@ -50,7 +49,7 @@ const Hero = () => {
 
                 {/* p animation */}
                 <motion.p
-                    className="text-white text-[12px] md:text-[18px] mt-2 italic leading-6 md:leading-8 tracking-wider"
+                    className="text-white text-md mt-2 font-futura font-normal leading-loose"
                     initial={{ y: 100, opacity: 0 }} // Start from bottom
                     whileInView={{ y: 0, opacity: 1 }} // Animate when in view
                     transition={{ duration: 1.2, ease: "easeOut", delay: 2 }} // Smooth transition with delay
@@ -65,6 +64,7 @@ const Hero = () => {
                     team brings creativity, precision, and attention to detail
                     into every project.
                 </motion.p>
+
             </div>
         </main>
     );

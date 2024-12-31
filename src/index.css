@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer base {
+  html {
+    font-family: "Futura", sans-serif;
+  }
+}
 *,
 ::after,
 ::before {
@@ -22,8 +26,8 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
+  font-family: "Futura", sans-serif;
+  line-height: 1.75;
 }
 
 h1, h2, h3, h4 {
@@ -60,7 +64,7 @@ p {
 
 
 li {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Futura", sans-serif;
   line-height: 1.6;
 
 }
@@ -261,6 +265,7 @@ body {
   color: black;
   overflow: hidden;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
 /* Hover effect */

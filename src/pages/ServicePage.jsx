@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import LoadingScreen from '../components/LoadingScreen';
 import { ResidentialImages } from '../utils/servicesData';
 import { CommercialImages } from '../utils/servicesData';
-import {FurnitureImages} from '../utils/servicesData'
+import { FurnitureImages } from '../utils/servicesData'
+import MetaTags from '../components/MetaTags';
 
 const ServicePage = () => {
     const currentService = useSelector((state) => state.services.currentService);
@@ -35,8 +36,12 @@ const ServicePage = () => {
 
     return (
         <>
-            {/* Render both components simultaneously */}
             <div className="servicesPage-container relative " >
+                <MetaTags
+                    title="Halchemy Interiors - Our Services"
+                    description="Discover our interior design services for residential, office, and commercial spaces."
+                    canonical="https://www.halchemyinteriors.com/services"
+                />
                 {isLoading && <LoadingScreen isVisible={isLoading} />}
                 <main
                     className="servicesPage-main"
@@ -65,7 +70,7 @@ const ServicePage = () => {
                         <div className="services-list max-w-[90vw] m-auto mt-12">
                             <div className="details-section">
                                 <h2 className="text-[#8A7C56] text-2xl md:text-3xl lg:text-3xl">{currentService.title}</h2>
-                                <p className="md:text-center lg:text-center text-gray-600   text-base  text-lg md:text-xl lg:text-xl">
+                                <p className="md:text-center lg:text-center text-gray-600  font-futura font-normal leading-loose">
                                     {currentService.description}
                                 </p>
                             </div>

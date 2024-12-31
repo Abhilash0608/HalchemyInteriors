@@ -33,7 +33,7 @@ const CustomDropdown = ({ isScrolled }) => {
                      hover:border-black hover:text-black hover:bg-white
                      `}
             >
-                <span>{currentService ? currentService.title : 'Select an option'}</span>
+                <span className='text-sm'>{currentService ? currentService.title : 'Select an option'}</span>
                 {isOpen ? <FaChevronUp className="ml-2" /> : <FaChevronDown className="ml-2" />}
             </button>
 

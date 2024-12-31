@@ -23,13 +23,13 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
           <div className="flex flex-col items-center">
             <ul className="space-y-4">
               <li>
-                <Link to="/" className="hover:text-gray-900">Home</Link>
+                <Link to="/" className="hover:text-gray-900 text-base">Home</Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-gray-900">Services</Link>
+                <Link to="/services" className="hover:text-gray-900 text-base">Services</Link>
               </li>
               <li>
-                <Link to="/testimonials" className="hover:text-gray-900">Products</Link>
+                <Link to="/testimonials" className="hover:text-gray-900 text-base">Products</Link>
               </li>
             </ul>
           </div>
@@ -37,10 +37,10 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
           <div className="flex flex-col items-center">
             <ul className="space-y-4">
               <li>
-                <Link to="/about" className="hover:text-gray-900">About Us</Link>
+                <Link to="/about" className="hover:text-gray-900 text-base">About Us</Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-gray-900">Contact Us</Link>
+                <Link to="/contact" className="hover:text-gray-900 text-base">Contact Us</Link>
               </li>
             </ul>
           </div> 
@@ -55,7 +55,7 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
           <ul className="space-y-4">
             <li className="flex gap-2 items-center hover:text-gray-900">
               <FaMapMarkerAlt className="text-lg " />
-              <span>Gachibowli</span>
+              <span className="text-sm">Gachibowli</span>
             </li>
             <li className="flex gap-2 items-center">
               <FaPhoneAlt className="text-lg" />
