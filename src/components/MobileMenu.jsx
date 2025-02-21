@@ -35,8 +35,8 @@ const MobileMenu = ({
                                         onClick={() => setShowSubMenu(!showSubMenu)}
                                         className="flex items-center justify-between cursor-pointer"
                                     >
-                                        <span>{link.title}</span>
-                                        <span>{showSubMenu ? "-" : "+"}</span>
+                                        <span className="text-sm">{link.title}</span>
+                                        <span className="text-sm">{showSubMenu ? "-" : "+"}</span>
                                     </div>
                                     {showSubMenu && (
                                         <motion.ul

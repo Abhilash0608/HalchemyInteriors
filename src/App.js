@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 import { FaWhatsapp } from 'react-icons/fa';
 import React, { Suspense, useEffect, useState } from 'react';
 import LoadingScreen from './components/LoadingScreen';
 import ScratchCard from './components/ScratchImage';
-import hero2 from './assets/hero2.jpg'; // Overlay imagegit 
+import hero2 from './assets/before.jpg'; // Overlay imagegit 
 import hero3 from './assets/hero3.jpg'; // Bottom image
 
 // Lazy loading components
@@ -26,12 +25,12 @@ function App() {
 
   // Show modal after 30 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowModal(true), 30000); // 30 seconds
+    const timer = setTimeout(() => setShowModal(true), 15000); 
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000); // Loading duration: 2 seconds
+    const timer = setTimeout(() => setIsLoading(false), 2000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -67,67 +66,32 @@ function App() {
         {/* Modal */}
         {showModal && (
           <div
-            className="modal-overlay"
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.7)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              zIndex: 999,
-            }}
+          className="fixed inset-0 w-full h-full bg-black bg-opacity-100 flex justify-center items-center  z-[999]"
+        >
+          <div
+            className="relative bg-white rounded-lg shadow-lg   text-center"
+            
           >
-            <div
-              className="modal-content"
-              style={{
-                position: 'relative',
-                backgroundColor: 'white',
-                borderRadius: '10px',
-                boxShadow: '0 0 10px rgba(0,0,0,0.5)',
-                width: '80%',
-                maxWidth: '600px',
-                textAlign: 'center',
-              }}
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-2.5 right-2.5  bg-[#8A7C56] text-white border-none rounded-full w-7 h-7 cursor-pointer z-[1000]"
             >
-              {/* Close Button */}
-              <button
-                onClick={closeModal}
-                style={{
-                  position: 'absolute',
-                  top: '10px',
-                  right: '10px',
-                  background: 'bg-yellow-800',
-                  color: 'black',
-                  border: 'none',
-                  borderRadius: '50%',
-                  width: '30px',
-                  height: '30px',
-                  cursor: 'pointer',
-                  zIndex:"1000"
-                }}
-              >
-                X
-              </button>
-
-             
-
-              {/* Hand Icon and Scratch Text */}
-              
-
-              {/* ScratchCard */}
-              <ScratchCard
-                width={600}
-                height={400}
-                image={hero3} // Bottom image
-                overlayImage={hero2} // Overlay image
-                brushSize={30}
-              />
-            </div>
+              X
+            </button>
+        
+            {/* ScratchCard */}
+            <ScratchCard
+              width={600}
+              height={400}
+              image={hero3} // Bottom image
+              overlayImage={hero2} // Overlay image
+              brushSize={30}
+              closeModal={closeModal}
+            />
           </div>
+        </div>
+        
         )}
       </div>
     </Router>

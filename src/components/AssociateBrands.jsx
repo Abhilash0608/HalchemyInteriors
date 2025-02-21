@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader";
 const AssociateBrands = () => {
     return (
         <div className="flex w-full flex-col justify-center items-center max-w-[90vw] m-auto my-4">
-            <div>
+            <div className="">
                 <SectionHeader mainHeading={"Our Associate"} subHeading={"Brands"} />
             </div>
             <InfiniteCarousel/>

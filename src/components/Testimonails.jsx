@@ -7,6 +7,7 @@ const testimonials = [
         id: 1,
         text: "The woodwork delivered by Halchemy Interior was meticulously designed and executed, perfectly reflecting our vision and enhancing our space's overall aesthetic.",
         name: "Anil Kumar",
+        name: "Vidya Sagar Gunturu",
         rating: 5,
     },
     {

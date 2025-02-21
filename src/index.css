@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer base {
+  html {
+    font-family: "Futura", sans-serif;
+  }
+}
 *,
 ::after,
 ::before {
@@ -22,8 +26,8 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
+  font-family: "Futura", sans-serif;
+  line-height: 1.75;
 }
 
 h1, h2, h3, h4 {
@@ -60,7 +64,7 @@ p {
 
 
 li {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Futura", sans-serif;
   line-height: 1.6;
 
 }
@@ -261,6 +265,7 @@ body {
   color: black;
   overflow: hidden;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
 /* Hover effect */
@@ -354,7 +359,7 @@ body {
 .header-line:hover{
   background-color: #8A7C56;
 }
-.underline{
+.underlinee{
   width:20%;
   height: 4px;
    background-color:#8A7C56;
@@ -368,17 +373,12 @@ body {
 
 .italic-heading {
   font-style: italic;
-  font-size: 42px;
+  font-size: 32px;
   color: #8A7C56;
   letter-spacing: 2px;
 }
 
-.underline {
-  width: 20%; 
-  height: 4px;
-  background-color: #8A7C56;
-  border-radius: 10px;
-}
+
 
 .nav-header {
   background: transparent;
@@ -468,7 +468,7 @@ body {
 }
 /* ------------- *about us * ---------- */
 .aboutus-section{
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../src/assets/image3.jpg');
+  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../src/assets/image3.jpg'); */
   border-radius: 10px;
   background-size: cover;
   background-size: cover;
@@ -530,7 +530,17 @@ body {
 
 @media (max-width: 640px) {
   .whatsapp-icon{
-    /* display: none; */
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    bottom: 8%;
+    left: 80%;
+    background-color: green;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: blink 3s infinite;
+    animation-delay: 5s;
+    z-index: 10;
   }
 }
 
@@ -590,7 +600,7 @@ body {
 }
 
 .loading-text {
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: bold;
   z-index: 20;
 }
@@ -602,7 +612,7 @@ body {
 
 @media (max-width: 480px) {
   .loading-text {
-    font-size: 3.5rem;  /* Even smaller font size for very small devices */
+    font-size: 3rem;  /* Even smaller font size for very small devices */
   }
 }
 
